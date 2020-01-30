@@ -1,0 +1,10 @@
+We are scheduling the duties for a set of doctors {0, . . . , D − 1} in an emergency room. We are concerned with a period of T days numbered 0 to (T −1) (e.g. T = 31 for a month, or T = 365 for a year). For each of these days, we will need to know the corresponding day-of-the-week, represented by a number between
+1
+.
+0 (Monday) and 6 (Sunday). The day-of-the-week corresponding to the first day is given by F. For example, if F = 2 then the period starts on a Wednesday. There are two shifts per day: the daytime shift, and the following nighttime shift. Our period of concern starts with the daytime shift for day 0, and ends with the nighttime shift for day (T − 1). We are given the following data and rules:
+• For each day-of-the-week w ∈ {0,...,6}, we know the minimum necessary staffing level of the emergency room: Lday,w for the daytime, and Lnight,w for the following nighttime.
+• Foreachdayt∈{0,...,T−1},Adt =1ifthedoctord∈{0,...,D−1}isavailablethatday(bothdaytime and subsequent nighttime), and Adt = 0 otherwise (neither daytime nor nighttime).
+• If a doctor is on duty during a nighttime, that doctor cannot be on duty the following daytime.
+• If a doctor is on duty during a nighttime, that doctor cannot be on duty for the two following nightimes.
+• There is a system of points to measure how taxing the schedule is on each doctor. For each day-of-the-week w ∈ {0, . . . , 6}, a doctor gets Pday,w points for being on duty during the daytime, and Pnight,w for being on duty during the nighttime.
+Given a schedule, let Pmax be the largest number of points any of the doctors gets. Design a schedule that minimizes Pmax .
